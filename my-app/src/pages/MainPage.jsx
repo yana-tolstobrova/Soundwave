@@ -4,7 +4,7 @@ import { NavBar } from '../components/NavBar';
 
 export const MainPage=()=> {
   return (
-    <div>
+    <div className='bg-general-background'>
       <NavBar />
       
       <div>Main page text</div>

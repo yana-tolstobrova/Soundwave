@@ -4,7 +4,7 @@ import { NavBar } from '../components/NavBar'
 
 export function Join() {
   return (
-    <div>
+    <div className='bg-general-background'>
           <NavBar />
           <div>Join Now</div>
           <Footer/>
