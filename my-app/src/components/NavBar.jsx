@@ -1,22 +1,21 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import logo from '../images/logo.svg';
-import './NavBar.css'
 
 export function NavBar() {
   return (
-    <div>
-      <NavLink to={'/'} href='/MainPage'>
-        <img src={logo} alt='logo' />
-          <span>Soundwave</span> 
+    <div className='flex justify-between items-center w-4/6 mx-auto py-8'>
+      <NavLink to={'/'} href='/MainPage' className='flex items-center'>
+        <img src={logo} alt='logo' className='w-55 mr-4'/>
+        <span className='text-white font-normal text-2xl'>Soundwave</span> 
           </NavLink>
           
-          <ul>
+          <ul class='flex'>
               <li>
-                  <NavLink to={'/discover'} href='/discover'>Discover</NavLink>
+                  <NavLink to={'/discover'} href='/discover' className='hover:text-nav-hover text-white font-normal text-lg mr-10'>Discover</NavLink>
               </li>
               <li>
-                  <NavLink to={'/join'} href='/join'>Join</NavLink>
+                  <NavLink to={'/join'} href='/join' className='text-white hover:text-nav-hover font-normal text-lg'>Join</NavLink>
               </li>
           </ul>
 
