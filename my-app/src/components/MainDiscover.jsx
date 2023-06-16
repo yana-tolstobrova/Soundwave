@@ -1,8 +1,8 @@
 import React from 'react';
-import iconCharts from '../images/icon-charts.svg';
-import Covers from '../images/covers.jpg';
-import iconAlbums from '../images/icon-albums.svg';
-import iconMore from '../images/icon-more.svg';
+import iconCharts from '../assets/images/icon-charts.svg';
+import Covers from '../assets/images/covers.jpg';
+import iconAlbums from '../assets/images/icon-albums.svg';
+import iconMore from '../assets/images/icon-more.svg';
 export function MainDiscover() {
   return (
     <div className='w-4/6 mx-auto my-[10em] flex justify-between items-center'>

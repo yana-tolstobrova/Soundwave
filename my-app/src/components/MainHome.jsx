@@ -1,5 +1,5 @@
 import React from 'react';
-import Girl from '../images/landing-page-girl.png'
+import Girl from '../assets/images/landing-page-girl.png'
 import { ButtonJoin } from './ButtonJoin';
 
 export function MainHome() {

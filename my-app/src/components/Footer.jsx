@@ -1,6 +1,6 @@
 import React from 'react';
-import Twitter from '../images/twitter.svg';
-import Facebook from '../images/facebook.svg';
+import Twitter from '../assets/images/twitter.svg';
+import Facebook from '../assets/images/facebook.svg';
 export function Footer() {
   return (
     <div className='text-white font-bold bg-footer-form-icon-bg z-20 relative'>
