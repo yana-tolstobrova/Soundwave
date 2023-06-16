@@ -5,7 +5,7 @@ import logo from '../images/logo.svg';
 export function NavBar() {
   return (
     <div className='flex justify-between items-center w-4/6 mx-auto py-8'>
-      <NavLink to={'/'} href='/MainPage' className='flex items-center'>
+      <NavLink to={'/'} href='/MainPage' className='flex items-center z-20'>
         <img src={logo} alt='logo' className='w-55 mr-4'/>
         <span className='text-white font-normal text-2xl'>Soundwave</span> 
           </NavLink>

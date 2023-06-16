@@ -8,9 +8,10 @@ export function Join() {
     <div className='bg-general-background relative overflow-hidden'>
           <NavBar />
           <MainJoin />
+          <Footer />
         <div className='bg-circle1 w-[30rem] h-[30rem] rounded-full absolute top-[25rem] left-[-5rem]'></div>
         <div className='bg-circle2-3 w-[30rem] h-[30rem] rounded-full absolute top-[-10rem] right-[47rem]'></div>
-      <Footer />
+      
           
           
     </div>

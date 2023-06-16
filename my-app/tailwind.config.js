@@ -11,7 +11,7 @@ module.exports = {
       'footer-form-icon-bg': '#202027',
       'nav-hover': '#202027',
       'border-input': '#2E3852',
-      'border.input-focus': '#596da0',
+      'border-input-focus': '#596da0',
       'button-bg': '#1762A7',
       'button-hover': '#2180d8',
       'button-focus': '#2796ff',
