@@ -15,7 +15,7 @@ module.exports = {
       'button-bg': '#1762A7',
       'button-hover': '#2180d8',
       'button-focus': '#2796ff',
-      'accent-text': '#2796ff',
+      'accent-text': '#F8049C',
       'circle1': '#bc3a801a',
       'circle2-3': '#3457b21a',
       'white': '#FFFFFF',

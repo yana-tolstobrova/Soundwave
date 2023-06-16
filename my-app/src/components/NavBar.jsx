@@ -12,10 +12,10 @@ export function NavBar() {
           
           <ul class='flex'>
               <li>
-                  <NavLink to={'/discover'} href='/discover' className='hover:text-nav-hover text-white font-normal text-lg mr-10'>Discover</NavLink>
+                  <NavLink to={'/discover'} className='hover:text-nav-hover text-white font-normal text-lg mr-10'>Discover</NavLink>
               </li>
               <li>
-                  <NavLink to={'/join'} href='/join' className='text-white hover:text-nav-hover font-normal text-lg'>Join</NavLink>
+                  <NavLink to={'/join'} className='text-white hover:text-nav-hover font-normal text-lg'>Join</NavLink>
               </li>
           </ul>
 

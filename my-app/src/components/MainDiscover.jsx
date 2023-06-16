@@ -5,10 +5,10 @@ import iconAlbums from '../images/icon-albums.svg';
 import iconMore from '../images/icon-more.svg';
 export function MainDiscover() {
   return (
-    <div className='w-4/6 mx-auto mt-[9em] mb-[7em] flex justify-between items-center'>
+    <div className='w-4/6 mx-auto my-[10em] flex justify-between items-center'>
         <div className='text-white'>
               <h1 className='text-5xl'>Discover new music</h1>
-              <ul className='flex my-10'>
+              <ul className='flex my-5'>
                   <li>
                       <img src={iconCharts} alt='icon of microphone with text: charts' className='mr-5'></img>
                   </li>
