@@ -37,8 +37,8 @@ const validate = values => {
   
   if (!values.password) {
     errors.password = 'Required';
-  } else if (!/^(?=.*?[A-Za-z])(?=.*?[0-9]).{6,}$/i.test(values.email)) {
-    errors.password = 'Must be 20 characters or less';
+  } else if (!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/i.test(values.password)) {
+    errors.password = 'Must be minimum 8 characters, have at least 1 letter and 1 number';
   }
 
   
