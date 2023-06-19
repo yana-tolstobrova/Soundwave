@@ -40,9 +40,6 @@ const validate = values => {
   } else if (!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/i.test(values.password)) {
     errors.password = 'Must be minimum 8 characters, have at least 1 letter and 1 number';
   }
-
-  
-
   return errors;
 };
 
@@ -56,11 +53,14 @@ export function SignupForm () {
     },
     validate,
     onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
-    },
+      JSON.stringify(values, null, 2);
+      alert('Form was sended correctly');
+      formik.resetForm()
+      
+    }
   });
   return (
-    <form onSubmit={formik.handleSubmit} className='text-white flex-col flex w-[30rem] bg-footer-form-icon-bg px-10 py-7 rounded-xl'>
+      <form onSubmit={formik.handleSubmit} className='text-white flex-col flex w-[30rem] bg-footer-form-icon-bg px-10 py-7 rounded-xl'>
       <label htmlFor="name">Name:</label>
       <input
         id="name"
@@ -69,13 +69,13 @@ export function SignupForm () {
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
         value={formik.values.name}
-        className='bg-footer-form-icon-bg border border-border-input p-1 rounded-md mb-5 focus:outline-none focus:border-border-input-focus mt-2'
+        className='bg-footer-form-icon-bg border border-border-input p-1 rounded-md focus:outline-none focus:border-border-input-focus mt-2'
       />
       {formik.touched.name && formik.errors.name ? (
-        <div>{formik.errors.name}</div>
+        <div className='text-xs text-accent-text'>{formik.errors.name}</div>
       ) : null}
 
-      <label htmlFor="email">Email:</label>
+      <label htmlFor="email" className='mt-5'>Email:</label>
       <input
         id="email"
         name="email"
@@ -83,13 +83,13 @@ export function SignupForm () {
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
         value={formik.values.email}
-        className='bg-footer-form-icon-bg border border-border-input p-1 rounded-md mb-5 focus:outline-none focus:border-border-input-focus mt-2'
+        className='bg-footer-form-icon-bg border border-border-input p-1 rounded-md mb-1 focus:outline-none focus:border-border-input-focus mt-2'
       />
       {formik.touched.email && formik.errors.email ? (
-        <div>{formik.errors.email}</div>
+        <div className='text-xs text-accent-text'>{formik.errors.email}</div>
       ) : null}
 
-      <label htmlFor="password">Password:</label>
+      <label htmlFor="password" className='mt-5'>Password:</label>
       <input
         id="password"
         name="password"
@@ -97,13 +97,13 @@ export function SignupForm () {
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
         value={formik.values.password}
-        className='bg-footer-form-icon-bg border border-border-input p-1 rounded-md mb-5 focus:outline-none focus:border-border-input-focus mt-2'
+        className='bg-footer-form-icon-bg border border-border-input p-1 rounded-md mb-1 focus:outline-none focus:border-border-input-focus mt-2'
       />
       {formik.touched.password && formik.errors.password ? (
-        <div>{formik.errors.password}</div>
+        <div className='text-xs text-accent-text'>{formik.errors.password}</div>
       ) : null}
 
-      <button type="submit" className='text-sm bg-button-bg py-2 rounded-xl hover:bg-button-hover focus:bg-button-focus w-full'>Join Now</button>
-    </form>
+      <button  type="submit" className='text-sm bg-button-bg py-2 rounded-xl hover:bg-button-hover focus:bg-button-focus w-full mt-5'>Join Now</button>
+      </form>
   );
 };
