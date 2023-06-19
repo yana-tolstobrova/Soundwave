@@ -5,8 +5,8 @@ import iconAlbums from '../assets/images/icon-albums.svg';
 import iconMore from '../assets/images/icon-more.svg';
 export function MainDiscover() {
   return (
-    <div className='w-4/6 mx-auto my-[10em] flex justify-between items-center'>
-        <div className='text-white'>
+    <div className='flex flex-col my-4 w-6/6 mx-4 xl:w-4/6 xl:mx-auto xl:my-[10em] xl:flex-row xl:justify-between xl:items-center'>
+        <div className='text-white mb-5'>
               <h1 className='text-5xl'>Discover new music</h1>
               <ul className='flex my-5'>
                   <li>

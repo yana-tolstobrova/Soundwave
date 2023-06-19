@@ -60,7 +60,7 @@ export function SignupForm () {
     }
   });
   return (
-      <form onSubmit={formik.handleSubmit} className='text-white flex-col flex w-[30rem] bg-footer-form-icon-bg px-10 py-7 rounded-xl'>
+      <form onSubmit={formik.handleSubmit} className='text-white flex-col flex bg-footer-form-icon-bg px-10 py-7 rounded-xl z-20 my-5 w-[20rem] md:w-[30rem]'>
       <label htmlFor="name">Name:</label>
       <input
         id="name"
