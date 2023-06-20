@@ -16,7 +16,7 @@ export function SignupForm () {
         
       storeData(values)
 
-      alert('Form was sended correctly');
+      alert('Welcome to the Soundwave! Join the fun!');
 
       formik.resetForm()
       
