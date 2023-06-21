@@ -1,10 +1,24 @@
 import React from 'react';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { act, fireEvent, render, screen } from '@testing-library/react';
 import { SignupForm } from './Form';
+import { storeData } from './storeData';
+
+jest.mock('./storeData', () => ({
+  storeData: jest.fn(),
+}));
 
 describe('SignupForm', () => {
+  let windowAlert;
 
-  it('submits the form and resets the form state', () => {
+  beforeEach(() => {
+    windowAlert = jest.spyOn(window, 'alert').mockImplementation(() => {});
+  });
+
+  afterEach(() => {
+    windowAlert.mockRestore();
+  });
+
+  it('submits the form and resets the form state', async () => {
     render(<SignupForm />);
 
     const nameInput = screen.getByLabelText('Name:');
@@ -16,11 +30,19 @@ describe('SignupForm', () => {
     fireEvent.change(passwordInput, { target: { value: 'password123' } });
 
     const submitButton = screen.getByText('Join Now');
-      
-    fireEvent.click(submitButton);
-      
-    expect(window.alert).toHaveBeenCalledWith('Welcome to the Soundwave! Join the fun!');
 
+    // eslint-disable-next-line testing-library/no-unnecessary-act
+    await act(async () => {
+      fireEvent.click(submitButton);
+    });
+
+    expect(storeData).toHaveBeenCalledWith({
+      name: 'Alex',
+      email: 'alex@example.com',
+      password: 'password123',
+    });
+
+    expect(windowAlert).toHaveBeenCalledWith('Welcome to the Soundwave! Join the fun!');
 
     expect(nameInput.value).toBe('');
     expect(emailInput.value).toBe('');

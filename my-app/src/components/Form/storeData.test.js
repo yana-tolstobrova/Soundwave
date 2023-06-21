@@ -20,7 +20,6 @@ Object.defineProperty(window, 'localStorage', {
 });
 
 
-
 describe('storeData', () => {
   beforeEach(() => {
     localStorage.clear();
@@ -28,8 +27,8 @@ describe('storeData', () => {
 
   it('should store encrypted data in local storage', () => {
     const values = {
-      name: 'John Doe',
-      email: 'john@example.com',
+      name: 'Yana Tolstobrova',
+      email: 'yanat@example.com',
       password: 'password123',
     };
 
@@ -57,8 +56,8 @@ describe('storeData', () => {
     localStorage.setItem('formEntries', JSON.stringify(initialEntries));
 
     const values = {
-      name: 'Jane Smith',
-      email: 'jane@example.com',
+      name: 'Alex Reshetnyk',
+      email: 'alexr@example.com',
       password: 'password456',
     };
 
