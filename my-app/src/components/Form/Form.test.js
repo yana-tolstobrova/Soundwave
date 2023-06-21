@@ -47,5 +47,99 @@ describe('SignupForm', () => {
     expect(nameInput.value).toBe('');
     expect(emailInput.value).toBe('');
     expect(passwordInput.value).toBe('');
+
+    
   });
+
+
+  it('error message for invalid email', async () => {
+    render(<SignupForm />);
+
+    const emailInput = screen.getByLabelText('Email:');
+
+
+    fireEvent.change(emailInput, { target: { value: 'abcd' } });
+
+
+    const submitButton = screen.getByText('Join Now');
+
+    // eslint-disable-next-line testing-library/no-unnecessary-act
+    await act(async () => {
+      fireEvent.click(submitButton);
+    });
+
+    expect(screen.getByText("Invalid email address")).toBeInTheDocument();
+    
+  })
+
+  it('error message for invalid password', async () => {
+    render(<SignupForm />);
+
+    const passwordInput = screen.getByLabelText('Password:');
+
+
+    fireEvent.change(passwordInput, { target: { value: '1234' } });
+
+
+    const submitButton = screen.getByText('Join Now');
+
+    // eslint-disable-next-line testing-library/no-unnecessary-act
+    await act(async () => {
+      fireEvent.click(submitButton);
+    });
+
+    expect(screen.getByText("Must be minimum 8 characters, have at least 1 letter and 1 number")).toBeInTheDocument();
+    
+  })
+
+  it('error message "required" for empry name input', async () => {
+    render(<SignupForm />);
+
+    const nameInput = screen.getByLabelText('Name:');
+    const emailInput = screen.getByLabelText('Email:');
+    const passwordInput = screen.getByLabelText('Password:');
+
+    fireEvent.change(nameInput, { target: { value: '' } });
+    fireEvent.change(emailInput, { target: { value: 'alex@example.com' } });
+    fireEvent.change(passwordInput, { target: { value: 'sdfg3456s' } });
+
+
+    const submitButton = screen.getByText('Join Now');
+
+    // eslint-disable-next-line testing-library/no-unnecessary-act
+    await act(async () => {
+      fireEvent.click(submitButton);
+    });
+
+    const errorMessages = screen.queryAllByText('Required');
+    expect(errorMessages.length).toBe(1);
+    expect(errorMessages[0]).toBeInTheDocument();
+    
+  });
+
+  it('error messages "required" for all empty inputs', async () => {
+    render(<SignupForm />);
+
+    const nameInput = screen.getByLabelText('Name:');
+    const emailInput = screen.getByLabelText('Email:');
+    const passwordInput = screen.getByLabelText('Password:');
+
+    fireEvent.change(nameInput, { target: { value: '' } });
+    fireEvent.change(emailInput, { target: { value: '' } });
+    fireEvent.change(passwordInput, { target: { value: '' } });
+
+
+    const submitButton = screen.getByText('Join Now');
+
+    // eslint-disable-next-line testing-library/no-unnecessary-act
+    await act(async () => {
+      fireEvent.click(submitButton);
+    });
+
+  const errorMessages = screen.queryAllByText('Required');
+  expect(errorMessages.length).toBe(3); 
+  expect(errorMessages[0]).toBeInTheDocument();
+    
+  })
+
 });
