@@ -92,7 +92,7 @@ describe('SignupForm', () => {
     
   })
 
-  it('error message "required" for empry name input', async () => {
+  it('error message "required" for empty name input', async () => {
     render(<SignupForm />);
 
     const nameInput = screen.getByLabelText('Name:');

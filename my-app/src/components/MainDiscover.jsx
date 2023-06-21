@@ -5,7 +5,7 @@ import iconAlbums from '../assets/images/icon-albums.svg';
 import iconMore from '../assets/images/icon-more.svg';
 export function MainDiscover() {
   return (
-    <div className='flex flex-col my-4 w-6/6 mx-4 md:items-center xl:w-4/6 xl:mx-auto xl:my-[10em] xl:flex-row xl:justify-between'>
+    <div className='flex flex-col my-4 w-6/6 mx-4 md:items-center md:my-9 xl:w-4/6 xl:mx-auto xl:mb-[8.4rem] xl:mt-[8rem] xl:flex-row xl:justify-between'>
         <div className='text-white mb-5 md:text-center xl:text-left'>
               <h1 className='text-5xl' >Discover new music</h1>
               <ul className='flex my-5 md:justify-center xl:justify-start'>
@@ -21,7 +21,7 @@ export function MainDiscover() {
               </ul>
               <p>By joining you can benefit by listening to the latest albums released.</p>
         </div>
-        <img src={Covers} alt='four album covers' className='w-80 self-center'></img>
+        <img src={Covers} alt='four album covers' className='w-[15rem] self-center xl:w-80'></img>
     </div>
   )
 }

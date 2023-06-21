@@ -10,8 +10,8 @@ export function Footer() {
             <li>Contact</li>
           </ul>
           <ul className='flex'>
-            <li className='flex flex-col items-center mr-5 xl:flex-row'><img src={Twitter} alt='twitter icon' className='h-[1.5em] mb-[0.1em] xl:mr-3 xl:mb-0'/>Twitter</li>
-            <li className='flex flex-col items-center mr-5 xl:flex-row'><img src={Facebook} alt='facebook icon' className=' h-[1.5em] mb-[0.1em] xl:mr-3 xl:mb-0'/>Facebook</li>
+            <li className='flex flex-col items-center mr-5 xl:flex-row'><img src={Twitter} alt='twitter icon' className='h-[1.2em] w-[1.2em] mb-[0.1em] xl:mr-3 xl:mb-0'/>Twitter</li>
+            <li className='flex flex-col items-center mr-5 xl:flex-row'><img src={Facebook} alt='facebook icon' className=' h-[1.2em] w-[1.2em] mb-[0.15em] xl:mr-3 xl:mb-0'/>Facebook</li>
           </ul>
       </div>
       

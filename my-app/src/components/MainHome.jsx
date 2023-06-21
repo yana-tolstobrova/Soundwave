@@ -4,7 +4,7 @@ import { ButtonJoin } from './ButtonJoin';
 
 export function MainHome() {
   return (
-      <div className='w-6/6 mt-[9em] mb-[15em] flex flex-col justify-start xl:flex-row xl:mb-0 xl:w-4/6 xl:mx-auto xl:justify-between'>
+      <div className='w-6/6 mt-[7em] mb-[15em] flex flex-col justify-start md:mt-[6em] mb-[14em] xl:flex-row xl:mb-0 xl:w-4/6 xl:mx-auto xl:justify-between'>
         <img src={Girl} alt='girl with voluminous hair in profile' className='hidden z-10 xl:block xl:w-[25rem] '></img>
   
         <div className='text-white pt-20 px-4 xl:mx-0'>
