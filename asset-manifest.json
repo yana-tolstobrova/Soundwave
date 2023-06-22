@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Soundwave/static/css/main.d034b51b.css",
-    "main.js": "/Soundwave/static/js/main.003c5e07.js",
+    "main.js": "/Soundwave/static/js/main.582ec234.js",
     "static/media/landing-page-girl.png": "/Soundwave/static/media/landing-page-girl.9d276ac0bfa4c188903e.png",
     "static/media/covers.jpg": "/Soundwave/static/media/covers.77f7098f609ef18767e5.jpg",
     "static/media/icon-charts.svg": "/Soundwave/static/media/icon-charts.196ed08e8dffaec06f03974b7e3b041c.svg",
@@ -11,10 +11,10 @@
     "index.html": "/Soundwave/index.html",
     "static/media/facebook.svg": "/Soundwave/static/media/facebook.9a78c5da61adcff89056f886e3b14dcd.svg",
     "main.d034b51b.css.map": "/Soundwave/static/css/main.d034b51b.css.map",
-    "main.003c5e07.js.map": "/Soundwave/static/js/main.003c5e07.js.map"
+    "main.582ec234.js.map": "/Soundwave/static/js/main.582ec234.js.map"
   },
   "entrypoints": [
     "static/css/main.d034b51b.css",
-    "static/js/main.003c5e07.js"
+    "static/js/main.582ec234.js"
   ]
 }
