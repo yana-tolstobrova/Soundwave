@@ -5,7 +5,7 @@ import { DiscoverPage } from './pages/DiscoverPage';
 import { Join } from './pages/Join';
 function App() {
   return (
-    <Router>
+    <Router basename='/Soundwave'>
       <Routes>
               <Route path='/join' element={<Join />} />
               <Route path='/discover' element={<DiscoverPage/>} />
