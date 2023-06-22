@@ -14,12 +14,6 @@ function App() {
       </Routes>
     </Router>
       
-      
-    
-    
-      
-      
-    
   );
 }
 
